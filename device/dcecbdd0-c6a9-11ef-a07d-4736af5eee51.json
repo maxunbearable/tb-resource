@@ -1,0 +1,108 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : true
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "7d528d30-c1dd-11ef-936d-0f17ba5f8ce7"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "dcecbdd0-c6a9-11ef-a07d-4736af5eee51"
+    },
+    "label" : "",
+    "name" : "G2",
+    "softwareId" : null,
+    "type" : "default"
+  },
+  "credentials" : {
+    "credentialsId" : "pLyOB01W3qN2sYsuyUqD",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"mode\":\"basic\",\"name\":\"S5\",\"type\":\"socket\",\"enableRemoteLogging\":false,\"logLevel\":\"DEBUG\",\"configuration\":\"s5.json\",\"configurationJson\":{\"socket\":{\"address\":\"2\",\"type\":\"TCP\",\"port\":50000,\"bufferSize\":1024},\"devices\":[{\"address\":\"2\",\"deviceName\":\"2\",\"deviceType\":\"2\",\"encoding\":\"utf-8\",\"telemetry\":[{\"key\":\"2\",\"byteFrom\":-1,\"byteTo\":-1}],\"attributes\":[{\"key\":\"3\",\"byteFrom\":0,\"byteTo\":0}],\"attributeRequests\":[],\"attributeUpdates\":[],\"serverSideRpc\":[]}],\"logLevel\":\"DEBUG\",\"name\":\"S5\",\"enableRemoteLogging\":false,\"id\":\"6288eecd-e6cb-44d2-b5ac-7eaba3040587\",\"configVersion\":\"3.6.2\"},\"configVersion\":\"3.6.2\",\"ts\":1735567787997,\"sendDataOnlyOnChange\":false}",
+      "key" : "S5",
+      "lastUpdateTs" : 1735567788307,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1735568429404,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"S5\"]",
+      "key" : "inactive_connectors",
+      "lastUpdateTs" : 1735567788307,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1735568429404,
+      "longValue" : 1735568429404,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1735567805647,
+      "longValue" : 1735567804200,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastConnectTime",
+      "lastUpdateTs" : 1735561883813,
+      "longValue" : 1735561883813,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastDisconnectTime",
+      "lastUpdateTs" : 1735567804218,
+      "longValue" : 1735567804217,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[]",
+      "key" : "active_connectors",
+      "lastUpdateTs" : 1735567788307,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  }
+}

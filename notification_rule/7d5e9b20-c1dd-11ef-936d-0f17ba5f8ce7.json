@@ -1,0 +1,33 @@
+{
+  "entityType" : "NOTIFICATION_RULE",
+  "entity" : {
+    "additionalConfig" : {
+      "description" : "Send notification to tenant admins when comment is added by user on active alarm"
+    },
+    "enabled" : true,
+    "externalId" : null,
+    "id" : {
+      "entityType" : "NOTIFICATION_RULE",
+      "id" : "7d5e9b20-c1dd-11ef-936d-0f17ba5f8ce7"
+    },
+    "name" : "Comment on active alarm",
+    "recipientsConfig" : {
+      "targets" : [ "7d5a7c70-c1dd-11ef-936d-0f17ba5f8ce7" ],
+      "triggerType" : "ALARM_COMMENT"
+    },
+    "templateId" : {
+      "entityType" : "NOTIFICATION_TEMPLATE",
+      "id" : "7d5e4d00-c1dd-11ef-936d-0f17ba5f8ce7"
+    },
+    "triggerConfig" : {
+      "triggerType" : "ALARM_COMMENT",
+      "alarmSeverities" : null,
+      "alarmStatuses" : [ "ACTIVE" ],
+      "alarmTypes" : null,
+      "notifyOnCommentUpdate" : false,
+      "onlyUserComments" : true,
+      "triggerType" : "ALARM_COMMENT"
+    },
+    "triggerType" : "ALARM_COMMENT"
+  }
+}
