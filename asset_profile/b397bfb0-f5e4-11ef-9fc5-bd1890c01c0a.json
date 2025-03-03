@@ -1,0 +1,71 @@
+{
+  "entityType" : "ASSET_PROFILE",
+  "entity" : {
+    "default" : true,
+    "defaultDashboardId" : null,
+    "defaultEdgeRuleChainId" : null,
+    "defaultQueueName" : null,
+    "defaultRuleChainId" : null,
+    "description" : "Default asset profile",
+    "externalId" : null,
+    "id" : {
+      "entityType" : "ASSET_PROFILE",
+      "id" : "b397bfb0-f5e4-11ef-9fc5-bd1890c01c0a"
+    },
+    "image" : null,
+    "name" : "default"
+  },
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ {
+    "configuration" : {
+      "type" : "SIMPLE",
+      "arguments" : {
+        "output2" : {
+          "defaultValue" : "",
+          "refEntityKey" : {
+            "key" : "output2",
+            "type" : "TS_LATEST"
+          }
+        },
+        "qqq" : {
+          "defaultValue" : "",
+          "refEntityKey" : {
+            "key" : "output2",
+            "type" : "TS_LATEST"
+          }
+        },
+        "s" : {
+          "defaultValue" : "",
+          "refEntityKey" : {
+            "key" : "output2",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "output2+0",
+      "output" : {
+        "name" : "output-from-asset-profile",
+        "type" : "TIME_SERIES"
+      }
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1740994334228,
+      "failuresEnabled" : true
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "CALCULATED_FIELD",
+      "id" : "58a57ba0-f810-11ef-8a5e-c34579cf7c84"
+    },
+    "name" : "output2",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "b385e560-f5e4-11ef-9fc5-bd1890c01c0a"
+    },
+    "type" : "SIMPLE"
+  } ]
+}

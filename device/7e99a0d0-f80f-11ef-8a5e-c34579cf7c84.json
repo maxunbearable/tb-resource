@@ -1,0 +1,92 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : false,
+      "overwriteActivityTime" : false,
+      "description" : ""
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "b3913000-f5e4-11ef-9fc5-bd1890c01c0a"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "7e99a0d0-f80f-11ef-8a5e-c34579cf7c84"
+    },
+    "label" : "",
+    "name" : "cf-2",
+    "softwareId" : null,
+    "type" : "default"
+  },
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1740993099598,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "lastActivityTime",
+      "lastUpdateTs" : 1740993099597,
+      "longValue" : 1740993097537,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ {
+    "configuration" : {
+      "type" : "SIMPLE",
+      "arguments" : {
+        "q" : {
+          "defaultValue" : "",
+          "refEntityKey" : {
+            "key" : "temperature",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "q+0",
+      "output" : {
+        "name" : "output1",
+        "type" : "TIME_SERIES"
+      }
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1740994032544,
+      "failuresEnabled" : true
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "CALCULATED_FIELD",
+      "id" : "97b8e710-f80f-11ef-8a5e-c34579cf7c84"
+    },
+    "name" : "qq",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "b385e560-f5e4-11ef-9fc5-bd1890c01c0a"
+    },
+    "type" : "SIMPLE"
+  } ]
+}
