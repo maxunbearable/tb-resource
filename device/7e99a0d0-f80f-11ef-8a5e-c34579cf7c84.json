@@ -33,14 +33,23 @@
     "softwareId" : null,
     "type" : "default"
   },
+  "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
-      "booleanValue" : true,
+      "booleanValue" : false,
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1740993099598,
+      "lastUpdateTs" : 1740993734530,
       "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1740993734529,
+      "longValue" : 1740993734529,
       "strValue" : null
     }, {
       "booleanValue" : null,

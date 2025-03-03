@@ -15,6 +15,7 @@
     "image" : null,
     "name" : "default"
   },
+  "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
   },

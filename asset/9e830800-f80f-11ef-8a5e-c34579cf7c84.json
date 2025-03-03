@@ -21,6 +21,7 @@
     "name" : "asset",
     "type" : "default"
   },
+  "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ ]
   },

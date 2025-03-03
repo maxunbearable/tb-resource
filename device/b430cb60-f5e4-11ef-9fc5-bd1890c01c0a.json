@@ -31,6 +31,7 @@
     "softwareId" : null,
     "type" : "thermostat"
   },
+  "relations" : [ ],
   "attributes" : {
     "SERVER_SCOPE" : [ {
       "booleanValue" : false,
