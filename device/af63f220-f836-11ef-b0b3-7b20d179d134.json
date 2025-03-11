@@ -1,0 +1,154 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "Demo device that is used in Raspberry Pi GPIO control sample application"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "aed3e720-f836-11ef-b0b3-7b20d179d134"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "af63f220-f836-11ef-b0b3-7b20d179d134"
+    },
+    "label" : null,
+    "name" : "Raspberry Pi Demo Device",
+    "softwareId" : null,
+    "type" : "default"
+  },
+  "credentials" : {
+    "credentialsId" : "RASPBERRY_PI_DEMO_TOKEN",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1741010579457,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1741010579446,
+      "longValue" : 1741010579446,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ {
+    "configuration" : {
+      "type" : "SIMPLE",
+      "arguments" : {
+        "Simple" : {
+          "defaultValue" : "1.1111111111",
+          "refEntityKey" : {
+            "key" : "Simple",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "Simple",
+      "output" : {
+        "decimalsByDefault" : 5,
+        "name" : "SimpleOut",
+        "type" : "TIME_SERIES"
+      }
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1741173402386,
+      "failuresEnabled" : true
+    },
+    "name" : "Simple",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "aec95fd0-f836-11ef-b0b3-7b20d179d134"
+    },
+    "type" : "SIMPLE"
+  }, {
+    "configuration" : {
+      "type" : "SIMPLE",
+      "arguments" : {
+        "t" : {
+          "defaultValue" : "1.1111",
+          "refEntityKey" : {
+            "key" : "t",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "t",
+      "output" : {
+        "decimalsByDefault" : 2,
+        "name" : "t result",
+        "type" : "TIME_SERIES"
+      }
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1741174089983,
+      "failuresEnabled" : true
+    },
+    "name" : "Test",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "aec95fd0-f836-11ef-b0b3-7b20d179d134"
+    },
+    "type" : "SIMPLE"
+  }, {
+    "configuration" : {
+      "type" : "SIMPLE",
+      "arguments" : {
+        "t" : {
+          "defaultValue" : "1.1111",
+          "refEntityKey" : {
+            "key" : "t",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "t",
+      "output" : {
+        "decimalsByDefault" : 2,
+        "name" : "res",
+        "type" : "TIME_SERIES"
+      }
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1741174331857,
+      "failuresEnabled" : true
+    },
+    "name" : "grh",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "aec95fd0-f836-11ef-b0b3-7b20d179d134"
+    },
+    "type" : "SIMPLE"
+  } ]
+}

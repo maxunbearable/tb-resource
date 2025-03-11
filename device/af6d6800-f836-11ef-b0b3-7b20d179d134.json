@@ -1,0 +1,320 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "Demo device for Thermostats dashboard"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "af69e590-f836-11ef-b0b3-7b20d179d134"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "af6d6800-f836-11ef-b0b3-7b20d179d134"
+    },
+    "label" : null,
+    "name" : "Ther     mostat T2",
+    "softwareId" : null,
+    "type" : "thermostat"
+  },
+  "credentials" : {
+    "credentialsId" : "T2_TEST_TOKEN",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1741166830876,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "fgdfg",
+      "lastUpdateTs" : 1741166794110,
+      "longValue" : null,
+      "strValue" : "rtert"
+    }, {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "humidityAlarmFlag",
+      "lastUpdateTs" : 1741009922724,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "humidityAlarmThreshold",
+      "lastUpdateTs" : 1741009922724,
+      "longValue" : 30,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1741010579474,
+      "longValue" : 1741010579446,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 37.493801,
+      "jsonValue" : null,
+      "key" : "latitude",
+      "lastUpdateTs" : 1741009922724,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : -121.948769,
+      "jsonValue" : null,
+      "key" : "longitude",
+      "lastUpdateTs" : 1741009922724,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "oneSpaceInsideRegex",
+      "lastUpdateTs" : 1741166805332,
+      "longValue" : null,
+      "strValue" : "oneSpaceInsideRegex"
+    }, {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "temperatureAlarmFlag",
+      "lastUpdateTs" : 1741009922724,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "temperatureAlarmThreshold",
+      "lastUpdateTs" : 1741009922724,
+      "longValue" : 25,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ {
+    "configuration" : {
+      "type" : "SCRIPT",
+      "arguments" : {
+        "defrost" : {
+          "defaultValue" : "",
+          "refEntityKey" : {
+            "key" : "defrost",
+            "type" : "TS_LATEST"
+          }
+        },
+        "hello" : {
+          "limit" : 1000,
+          "refEntityKey" : {
+            "key" : "temperature",
+            "type" : "TS_ROLLING"
+          },
+          "timeWindow" : 900000
+        }
+      },
+      "expression" : "var merged = merge(defrost);",
+      "output" : {
+        "name" : "",
+        "type" : "TIME_SERIES"
+      }
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1741017896208,
+      "failuresEnabled" : true
+    },
+    "name" : "defrost",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "aec95fd0-f836-11ef-b0b3-7b20d179d134"
+    },
+    "type" : "SCRIPT"
+  }, {
+    "configuration" : {
+      "type" : "SCRIPT",
+      "arguments" : {
+        "mainIntakeValveOpened" : {
+          "defaultValue" : "2",
+          "refEntityId" : {
+            "entityType" : "TENANT",
+            "id" : "aec95fd0-f836-11ef-b0b3-7b20d179d134"
+          },
+          "refEntityKey" : {
+            "key" : "ghgh",
+            "type" : "TS_LATEST"
+          }
+        },
+        "mainIntakeValveOpened2" : {
+          "defaultValue" : "",
+          "refEntityKey" : {
+            "key" : "mainIntakeValveOpened2",
+            "type" : "TS_LATEST"
+          }
+        },
+        "poolDrainValveOpened" : {
+          "defaultValue" : "1",
+          "refEntityKey" : {
+            "key" : "poolDrainValveOpened",
+            "type" : "TS_LATEST"
+          }
+        },
+        "poolDrainValveOpened4" : {
+          "defaultValue" : "",
+          "refEntityKey" : {
+            "key" : "poolDrainValveOpened5",
+            "type" : "TS_LATEST"
+          }
+        },
+        "poolWeirValveOpened" : {
+          "defaultValue" : "1",
+          "refEntityKey" : {
+            "key" : "poolWeirValveOpened",
+            "type" : "TS_LATEST"
+          }
+        },
+        "waterLevel" : {
+          "defaultValue" : "1",
+          "refEntityKey" : {
+            "key" : "waterLevel",
+            "type" : "TS_LATEST"
+          }
+        },
+        "waterPumpActive" : {
+          "defaultValue" : "1",
+          "refEntityKey" : {
+            "key" : "waterPumpActive",
+            "type" : "TS_LATEST"
+          }
+        },
+        "waterPumpOutgoingValveOpened" : {
+          "defaultValue" : "",
+          "refEntityKey" : {
+            "key" : "waterPumpOutgoingValveOpened",
+            "type" : "TS_LATEST"
+          }
+        },
+        "waterPumpRunning" : {
+          "defaultValue" : "1",
+          "refEntityKey" : {
+            "key" : "waterPumpRunning",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "var filterSegmentFlowing = waterPumpActive.value === true &&\n    calculateFilterSegment();\n\nreturn {\n    \"cf_filterSegmentFlowing\": filterSegmentFlowing\n};\n\nfunction calculateFilterSegment() {\n    if (!(waterPumpOutgoingValveOpened.value === 1 &&\n            waterPumpRunning.value === 1)) {\n        return false;\n    }\n    if (poolDrainValveOpened.value === 1 && waterLevel\n        .value > 0) {\n        return true;\n    }\n    if (poolWeirValveOpened.value === 1 && waterLevel\n        .value > 88) {\n        return true;\n    }\n    if (mainIntakeValveOpened.value === 1) {\n        return true;\n    }\n    return false;\n}",
+      "output" : {
+        "type" : "TIME_SERIES"
+      }
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1741087616872,
+      "failuresEnabled" : true
+    },
+    "name" : "long",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "aec95fd0-f836-11ef-b0b3-7b20d179d134"
+    },
+    "type" : "SCRIPT"
+  }, {
+    "configuration" : {
+      "type" : "SIMPLE",
+      "arguments" : {
+        "simple" : {
+          "defaultValue" : "",
+          "refEntityKey" : {
+            "key" : "    simple   ",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "sim ple",
+      "output" : {
+        "name" : "sim ple",
+        "type" : "TIME_SERIES"
+      }
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1741104667034,
+      "failuresEnabled" : true
+    },
+    "name" : "si m p l e",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "aec95fd0-f836-11ef-b0b3-7b20d179d134"
+    },
+    "type" : "SIMPLE"
+  }, {
+    "configuration" : {
+      "type" : "SCRIPT",
+      "arguments" : {
+        "temperatureF" : {
+          "defaultValue" : "10",
+          "refEntityKey" : {
+            "key" : "temperature",
+            "type" : "TS_LATEST"
+          }
+        },
+        "temperatureY" : {
+          "limit" : 100,
+          "refEntityKey" : {
+            "key" : "temperature",
+            "type" : "TS_ROLLING"
+          },
+          "timeWindow" : 900000
+        }
+      },
+      "expression" : "var temperatureC = (temperatureF - 32) / 1.8;\nvar temperatureNew = temperatureY.avg();\nreturn {\n    \"ts\": ctx.args.temperatureF.ts,\n    \"values\": {\n        \"temperatureNew\": toFixed(temperatureC, 2)\n    }\n}",
+      "output" : {
+        "name" : "",
+        "type" : "TIME_SERIES"
+      }
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1741346873868,
+      "failuresEnabled" : true
+    },
+    "name" : "test",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "aec95fd0-f836-11ef-b0b3-7b20d179d134"
+    },
+    "type" : "SCRIPT"
+  } ]
+}

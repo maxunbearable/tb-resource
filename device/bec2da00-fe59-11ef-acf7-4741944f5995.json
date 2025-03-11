@@ -1,0 +1,77 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "gateway" : true
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "aed3e720-f836-11ef-b0b3-7b20d179d134"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "bec2da00-fe59-11ef-acf7-4741944f5995"
+    },
+    "label" : "",
+    "name" : "fdfsdf",
+    "softwareId" : null,
+    "type" : "default"
+  },
+  "credentials" : {
+    "credentialsId" : "gXPdhvZ8HT0z20lNXMwE",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1741685318801,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1741685318801,
+      "longValue" : 1741685318801,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "[\"fgfg\"]",
+      "key" : "active_connectors",
+      "lastUpdateTs" : 1741684854909,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : "{\"type\":\"mqtt\",\"name\":\"fgfg\",\"logLevel\":\"INFO\",\"useDefaults\":true,\"sendDataOnlyOnChange\":false,\"configurationJson\":{\"broker\":{\"name\":\"Default Local Broker\",\"host\":\"127.0.0.1\",\"port\":1883,\"clientId\":\"ThingsBoard_gateway\",\"version\":5,\"maxMessageNumberPerWorker\":10,\"maxNumberOfWorkers\":100,\"sendDataOnlyOnChange\":false,\"security\":{\"type\":\"basic\",\"username\":\"user\",\"password\":\"password\"}},\"mapping\":[{\"topicFilter\":\"sensor/data\",\"converter\":{\"type\":\"json\",\"deviceNameJsonExpression\":\"${serialNumber}\",\"deviceTypeJsonExpression\":\"${sensorType}\",\"sendDataOnlyOnChange\":false,\"timeout\":60000,\"attributes\":[{\"type\":\"string\",\"key\":\"model\",\"value\":\"${sensorModel}\"},{\"type\":\"string\",\"key\":\"${sensorModel}\",\"value\":\"on\"}],\"timeseries\":[{\"type\":\"double\",\"key\":\"temperature\",\"value\":\"${temp}\"},{\"type\":\"double\",\"key\":\"humidity\",\"value\":\"${hum}\"},{\"type\":\"string\",\"key\":\"combine\",\"value\":\"${hum}:${temp}\"}]}},{\"topicFilter\":\"sensor/+/data\",\"converter\":{\"type\":\"json\",\"deviceNameTopicExpression\":\"(?<=sensor/)(.*?)(?=/data)\",\"deviceTypeTopicExpression\":\"Thermometer\",\"sendDataOnlyOnChange\":false,\"timeout\":60000,\"attributes\":[{\"type\":\"string\",\"key\":\"model\",\"value\":\"${sensorModel}\"}],\"timeseries\":[{\"type\":\"double\",\"key\":\"temperature\",\"value\":\"${temp}\"},{\"type\":\"double\",\"key\":\"humidity\",\"value\":\"${hum}\"}]}},{\"topicFilter\":\"sensor/raw_data\",\"converter\":{\"type\":\"bytes\",\"deviceNameExpression\":\"[0:4]\",\"deviceTypeExpression\":\"default\",\"sendDataOnlyOnChange\":false,\"timeout\":60000,\"attributes\":[{\"type\":\"raw\",\"key\":\"rawData\",\"value\":\"[:]\"}],\"timeseries\":[{\"type\":\"raw\",\"key\":\"temp\",\"value\":\"[4:]\"}]}},{\"topicFilter\":\"custom/sensors/+\",\"converter\":{\"type\":\"custom\",\"extension\":\"CustomMqttUplinkConverter\",\"cached\":true,\"extension-config\":{\"temperatureBytes\":2,\"humidityBytes\":2,\"batteryLevelBytes\":1}}}],\"connectRequests\":[{\"topicFilter\":\"sensor/connect\",\"deviceNameJsonExpression\":\"${serialNumber}\"},{\"topicFilter\":\"sensor/+/connect\",\"deviceNameTopicExpression\":\"(?<=sensor/)(.*?)(?=/connect)\"}],\"disconnectRequests\":[{\"topicFilter\":\"sensor/disconnect\",\"deviceNameJsonExpression\":\"${serialNumber}\"},{\"topicFilter\":\"sensor/+/disconnect\",\"deviceNameTopicExpression\":\"(?<=sensor/)(.*?)(?=/disconnect)\"}],\"attributeRequests\":[{\"retain\":false,\"topicFilter\":\"v1/devices/me/attributes/request\",\"deviceNameJsonExpression\":\"${serialNumber}\",\"attributeNameJsonExpression\":\"${versionAttribute}, ${pduAttribute}\",\"topicExpression\":\"devices/${deviceName}/attrs\",\"valueExpression\":\"${attributeKey}: ${attributeValue}\"}],\"attributeUpdates\":[{\"retain\":true,\"deviceNameFilter\":\".*\",\"attributeFilter\":\"firmwareVersion\",\"topicExpression\":\"sensor/${deviceName}/${attributeKey}\",\"valueExpression\":\"{\\\"${attributeKey}\\\":\\\"${attributeValue}\\\"}\"}],\"serverSideRpc\":[{\"deviceNameFilter\":\".*\",\"methodFilter\":\"echo\",\"requestTopicExpression\":\"sensor/${deviceName}/request/${methodName}/${requestId}\",\"responseTopicExpression\":\"sensor/${deviceName}/response/${methodName}/${requestId}\",\"responseTimeout\":10000,\"valueExpression\":\"${params}\"},{\"deviceNameFilter\":\".*\",\"methodFilter\":\"no-reply\",\"requestTopicExpression\":\"sensor/${deviceName}/request/${methodName}/${requestId}\",\"valueExpression\":\"${params}\"}]},\"configuration\":\"fgfg.json\",\"ts\":1741684854894}",
+      "key" : "fgfg",
+      "lastUpdateTs" : 1741684854909,
+      "longValue" : null,
+      "strValue" : null
+    } ]
+  },
+  "calculatedFields" : [ ]
+}

@@ -1,0 +1,72 @@
+{
+  "entityType" : "DEVICE_PROFILE",
+  "entity" : {
+    "default" : false,
+    "defaultDashboardId" : null,
+    "defaultEdgeRuleChainId" : null,
+    "defaultQueueName" : null,
+    "defaultRuleChainId" : null,
+    "description" : "",
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "d5708b90-fe7b-11ef-916b-378df8ccbc60"
+    },
+    "image" : null,
+    "name" : "ms_device_profile",
+    "profileData" : {
+      "alarms" : null,
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "provisionConfiguration" : {
+        "type" : "DISABLED",
+        "provisionDeviceSecret" : null
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "provisionDeviceKey" : null,
+    "provisionType" : "DISABLED",
+    "softwareId" : null,
+    "transportType" : "DEFAULT",
+    "type" : "DEFAULT"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ {
+    "configuration" : {
+      "type" : "SIMPLE",
+      "arguments" : {
+        "temperature" : {
+          "defaultValue" : "",
+          "refEntityKey" : {
+            "key" : "temperature",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "temperature 2",
+      "output" : {
+        "name" : "output",
+        "type" : "TIME_SERIES"
+      }
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1741700448638,
+      "failuresEnabled" : true
+    },
+    "name" : "CF with error without arguments",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "aec95fd0-f836-11ef-b0b3-7b20d179d134"
+    },
+    "type" : "SIMPLE"
+  } ]
+}

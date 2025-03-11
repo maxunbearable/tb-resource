@@ -1,0 +1,348 @@
+{
+  "entityType" : "DEVICE_PROFILE",
+  "entity" : {
+    "default" : false,
+    "defaultDashboardId" : null,
+    "defaultEdgeRuleChainId" : null,
+    "defaultQueueName" : null,
+    "defaultRuleChainId" : {
+      "entityType" : "RULE_CHAIN",
+      "id" : "af02e660-f836-11ef-b0b3-7b20d179d134"
+    },
+    "description" : "Thermostat device profile",
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "af69e590-f836-11ef-b0b3-7b20d179d134"
+    },
+    "image" : null,
+    "name" : "thermostat",
+    "profileData" : {
+      "alarms" : [ {
+        "alarmType" : "High Temperature",
+        "clearRule" : {
+          "alarmDetails" : "Current temperature = ${temperature}",
+          "condition" : {
+            "condition" : [ {
+              "key" : {
+                "key" : "temperature",
+                "type" : "TIME_SERIES"
+              },
+              "predicate" : {
+                "type" : "NUMERIC",
+                "operation" : "LESS_OR_EQUAL",
+                "value" : {
+                  "defaultValue" : 25.0,
+                  "dynamicValue" : {
+                    "inherit" : false,
+                    "sourceAttribute" : "temperatureAlarmThreshold",
+                    "sourceType" : "CURRENT_DEVICE",
+                    "resolvedValue" : null
+                  },
+                  "userValue" : null
+                }
+              },
+              "value" : null,
+              "valueType" : "NUMERIC"
+            } ],
+            "spec" : {
+              "type" : "SIMPLE"
+            }
+          },
+          "dashboardId" : null,
+          "schedule" : null
+        },
+        "createRules" : {
+          "MAJOR" : {
+            "alarmDetails" : "Current temperature = ${temperature}",
+            "condition" : {
+              "condition" : [ {
+                "key" : {
+                  "key" : "temperatureAlarmFlag",
+                  "type" : "ATTRIBUTE"
+                },
+                "predicate" : {
+                  "type" : "BOOLEAN",
+                  "operation" : "EQUAL",
+                  "value" : {
+                    "defaultValue" : true,
+                    "dynamicValue" : null,
+                    "userValue" : null
+                  }
+                },
+                "value" : null,
+                "valueType" : "BOOLEAN"
+              }, {
+                "key" : {
+                  "key" : "temperature",
+                  "type" : "TIME_SERIES"
+                },
+                "predicate" : {
+                  "type" : "NUMERIC",
+                  "operation" : "GREATER",
+                  "value" : {
+                    "defaultValue" : 25.0,
+                    "dynamicValue" : {
+                      "inherit" : false,
+                      "sourceAttribute" : "temperatureAlarmThreshold",
+                      "sourceType" : "CURRENT_DEVICE",
+                      "resolvedValue" : null
+                    },
+                    "userValue" : null
+                  }
+                },
+                "value" : null,
+                "valueType" : "NUMERIC"
+              } ],
+              "spec" : {
+                "type" : "SIMPLE"
+              }
+            },
+            "dashboardId" : null,
+            "schedule" : null
+          }
+        },
+        "id" : "highTemperatureAlarmID",
+        "propagate" : false,
+        "propagateRelationTypes" : null,
+        "propagateToOwner" : false,
+        "propagateToTenant" : false
+      }, {
+        "alarmType" : "Low Humidity",
+        "clearRule" : {
+          "alarmDetails" : "Current humidity = ${humidity}",
+          "condition" : {
+            "condition" : [ {
+              "key" : {
+                "key" : "humidity",
+                "type" : "TIME_SERIES"
+              },
+              "predicate" : {
+                "type" : "NUMERIC",
+                "operation" : "GREATER_OR_EQUAL",
+                "value" : {
+                  "defaultValue" : 60.0,
+                  "dynamicValue" : {
+                    "inherit" : false,
+                    "sourceAttribute" : "humidityAlarmThreshold",
+                    "sourceType" : "CURRENT_DEVICE",
+                    "resolvedValue" : null
+                  },
+                  "userValue" : null
+                }
+              },
+              "value" : null,
+              "valueType" : "NUMERIC"
+            } ],
+            "spec" : {
+              "type" : "SIMPLE"
+            }
+          },
+          "dashboardId" : null,
+          "schedule" : null
+        },
+        "createRules" : {
+          "MINOR" : {
+            "alarmDetails" : "Current humidity = ${humidity}",
+            "condition" : {
+              "condition" : [ {
+                "key" : {
+                  "key" : "humidityAlarmFlag",
+                  "type" : "ATTRIBUTE"
+                },
+                "predicate" : {
+                  "type" : "BOOLEAN",
+                  "operation" : "EQUAL",
+                  "value" : {
+                    "defaultValue" : true,
+                    "dynamicValue" : null,
+                    "userValue" : null
+                  }
+                },
+                "value" : null,
+                "valueType" : "BOOLEAN"
+              }, {
+                "key" : {
+                  "key" : "humidity",
+                  "type" : "TIME_SERIES"
+                },
+                "predicate" : {
+                  "type" : "NUMERIC",
+                  "operation" : "LESS",
+                  "value" : {
+                    "defaultValue" : 60.0,
+                    "dynamicValue" : {
+                      "inherit" : false,
+                      "sourceAttribute" : "humidityAlarmThreshold",
+                      "sourceType" : "CURRENT_DEVICE",
+                      "resolvedValue" : null
+                    },
+                    "userValue" : null
+                  }
+                },
+                "value" : null,
+                "valueType" : "NUMERIC"
+              } ],
+              "spec" : {
+                "type" : "SIMPLE"
+              }
+            },
+            "dashboardId" : null,
+            "schedule" : null
+          }
+        },
+        "id" : "lowHumidityAlarmID",
+        "propagate" : false,
+        "propagateRelationTypes" : null,
+        "propagateToOwner" : false,
+        "propagateToTenant" : false
+      } ],
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "provisionConfiguration" : {
+        "type" : "DISABLED",
+        "provisionDeviceSecret" : null
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "provisionDeviceKey" : null,
+    "provisionType" : "DISABLED",
+    "softwareId" : null,
+    "transportType" : "DEFAULT",
+    "type" : "DEFAULT"
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ {
+    "configuration" : {
+      "type" : "SIMPLE",
+      "arguments" : {
+        "temperature" : {
+          "defaultValue" : "x",
+          "refEntityKey" : {
+            "key" : "mm",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "temperature - 1",
+      "output" : {
+        "name" : "result-ms",
+        "type" : "TIME_SERIES"
+      }
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1741702178437,
+      "failuresEnabled" : true
+    },
+    "name" : "m",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "aec95fd0-f836-11ef-b0b3-7b20d179d134"
+    },
+    "type" : "SIMPLE"
+  }, {
+    "configuration" : {
+      "type" : "SIMPLE",
+      "arguments" : {
+        "device_temperature" : {
+          "defaultValue" : "9",
+          "refEntityId" : {
+            "entityType" : "DEVICE",
+            "id" : "af42ae80-f836-11ef-b0b3-7b20d179d134"
+          },
+          "refEntityKey" : {
+            "key" : "qwe",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "device_temperature - 7",
+      "output" : {
+        "decimalsByDefault" : 2,
+        "name" : "result device_temperature",
+        "type" : "TIME_SERIES"
+      }
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1741702443650,
+      "failuresEnabled" : true
+    },
+    "name" : "test with device arg",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "aec95fd0-f836-11ef-b0b3-7b20d179d134"
+    },
+    "type" : "SIMPLE"
+  }, {
+    "configuration" : {
+      "type" : "SIMPLE",
+      "arguments" : {
+        "x" : {
+          "defaultValue" : "",
+          "refEntityKey" : {
+            "key" : "x",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "x",
+      "output" : {
+        "name" : "y",
+        "type" : "TIME_SERIES"
+      }
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1741701068292,
+      "failuresEnabled" : true
+    },
+    "name" : "x",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "aec95fd0-f836-11ef-b0b3-7b20d179d134"
+    },
+    "type" : "SIMPLE"
+  }, {
+    "configuration" : {
+      "type" : "SCRIPT",
+      "arguments" : {
+        "x" : {
+          "defaultValue" : "",
+          "refEntityKey" : {
+            "key" : "x",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "return {\n    // Convert Fahrenheit to Celsius\n    \"temperatureCelsius\": (x - 32) / 1.8\n};",
+      "output" : {
+        "name" : "",
+        "type" : "TIME_SERIES"
+      }
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1741701973311,
+      "failuresEnabled" : true
+    },
+    "name" : "руддщ",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "aec95fd0-f836-11ef-b0b3-7b20d179d134"
+    },
+    "type" : "SCRIPT"
+  } ]
+}

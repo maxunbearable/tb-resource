@@ -1,14 +1,10 @@
 {
   "entityType" : "DEVICE",
   "entity" : {
-    "additionalInfo" : {
-      "gateway" : false,
-      "overwriteActivityTime" : false,
-      "description" : ""
-    },
+    "additionalInfo" : null,
     "customerId" : {
       "entityType" : "CUSTOMER",
-      "id" : "13814000-1dd2-11b2-8080-808080808080"
+      "id" : "af1a3ef0-f836-11ef-b0b3-7b20d179d134"
     },
     "deviceData" : {
       "configuration" : {
@@ -20,21 +16,21 @@
     },
     "deviceProfileId" : {
       "entityType" : "DEVICE_PROFILE",
-      "id" : "d5708b90-fe7b-11ef-916b-378df8ccbc60"
+      "id" : "aed3e720-f836-11ef-b0b3-7b20d179d134"
     },
     "externalId" : null,
     "firmwareId" : null,
     "id" : {
       "entityType" : "DEVICE",
-      "id" : "d761fb50-fe7b-11ef-916b-378df8ccbc60"
+      "id" : "af5fd370-f836-11ef-b0b3-7b20d179d134"
     },
-    "label" : "",
-    "name" : "ms_device1",
+    "label" : null,
+    "name" : "Test Device C1",
     "softwareId" : null,
-    "type" : "ms_device_profile"
+    "type" : "default"
   },
   "credentials" : {
-    "credentialsId" : "buzpuR4TksIQWvLxocCv",
+    "credentialsId" : "C1_TEST_TOKEN",
     "credentialsType" : "ACCESS_TOKEN",
     "credentialsValue" : null
   },
@@ -45,7 +41,7 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "active",
-      "lastUpdateTs" : 1741699942984,
+      "lastUpdateTs" : 1741010579468,
       "longValue" : null,
       "strValue" : null
     }, {
@@ -53,33 +49,56 @@
       "doubleValue" : null,
       "jsonValue" : null,
       "key" : "inactivityAlarmTime",
-      "lastUpdateTs" : 1741699942984,
-      "longValue" : 1741699942984,
-      "strValue" : null
-    }, {
-      "booleanValue" : null,
-      "doubleValue" : null,
-      "jsonValue" : null,
-      "key" : "lastActivityTime",
-      "lastUpdateTs" : 1741699337623,
-      "longValue" : 1741699335676,
+      "lastUpdateTs" : 1741010579468,
+      "longValue" : 1741010579446,
       "strValue" : null
     } ],
     "SHARED_SCOPE" : [ ]
   },
   "calculatedFields" : [ {
     "configuration" : {
-      "type" : "SCRIPT",
+      "type" : "SIMPLE",
       "arguments" : {
-        "y" : {
-          "limit" : 100,
+        "simple" : {
+          "defaultValue" : "1",
           "refEntityKey" : {
-            "key" : "temperature",
-            "type" : "TS_ROLLING"
+            "key" : "simple",
+            "type" : "TS_LATEST"
           }
         }
       },
-      "expression" : "return {\n    // Convert Fahrenheit to Celsius\n    \"temperatureCelsius\": (y.avg() - 32) / 1.8\n};",
+      "expression" : "simple / 3",
+      "output" : {
+        "decimalsByDefault" : 2,
+        "name" : "simpleOut",
+        "type" : "TIME_SERIES"
+      }
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1741185390826,
+      "failuresEnabled" : true
+    },
+    "name" : "simple",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "aec95fd0-f836-11ef-b0b3-7b20d179d134"
+    },
+    "type" : "SIMPLE"
+  }, {
+    "configuration" : {
+      "type" : "SCRIPT",
+      "arguments" : {
+        "temperature" : {
+          "defaultValue" : "1",
+          "refEntityKey" : {
+            "key" : "temperature",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "return {\n    // Convert Fahrenheit to Celsius\n    \"temperatureCelsius\": (temperature.value - 32) / 1.8 + 0\n};",
       "output" : {
         "name" : "",
         "type" : "TIME_SERIES"
@@ -88,10 +107,10 @@
     "configurationVersion" : 0,
     "debugSettings" : {
       "allEnabled" : false,
-      "allEnabledUntil" : 1741701514297,
+      "allEnabledUntil" : 1741185627911,
       "failuresEnabled" : true
     },
-    "name" : "y",
+    "name" : "temperature",
     "tenantId" : {
       "entityType" : "TENANT",
       "id" : "aec95fd0-f836-11ef-b0b3-7b20d179d134"

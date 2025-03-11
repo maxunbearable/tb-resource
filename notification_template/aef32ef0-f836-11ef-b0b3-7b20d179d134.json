@@ -1,0 +1,35 @@
+{
+  "entityType" : "NOTIFICATION_TEMPLATE",
+  "entity" : {
+    "configuration" : {
+      "deliveryMethodsTemplates" : {
+        "WEB" : {
+          "method" : "WEB",
+          "additionalConfig" : {
+            "icon" : {
+              "enabled" : true,
+              "icon" : "info",
+              "color" : "#757575"
+            },
+            "actionButtonConfig" : {
+              "enabled" : true,
+              "text" : "Go to Edge",
+              "linkType" : "LINK",
+              "link" : "/edgeManagement/instances/${edgeId}"
+            }
+          },
+          "body" : "Edge '${edgeName}' is now ${eventType}",
+          "enabled" : true,
+          "subject" : "Edge connection status change"
+        }
+      }
+    },
+    "externalId" : null,
+    "id" : {
+      "entityType" : "NOTIFICATION_TEMPLATE",
+      "id" : "aef32ef0-f836-11ef-b0b3-7b20d179d134"
+    },
+    "name" : "Edge connection notification",
+    "notificationType" : "EDGE_CONNECTION"
+  }
+}

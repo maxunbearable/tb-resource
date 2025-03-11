@@ -1,0 +1,295 @@
+{
+  "entityType" : "DEVICE",
+  "entity" : {
+    "additionalInfo" : {
+      "description" : "Demo device for Thermostats dashboard"
+    },
+    "customerId" : {
+      "entityType" : "CUSTOMER",
+      "id" : "13814000-1dd2-11b2-8080-808080808080"
+    },
+    "deviceData" : {
+      "configuration" : {
+        "type" : "DEFAULT"
+      },
+      "transportConfiguration" : {
+        "type" : "DEFAULT"
+      }
+    },
+    "deviceProfileId" : {
+      "entityType" : "DEVICE_PROFILE",
+      "id" : "af69e590-f836-11ef-b0b3-7b20d179d134"
+    },
+    "externalId" : null,
+    "firmwareId" : null,
+    "id" : {
+      "entityType" : "DEVICE",
+      "id" : "af6b4520-f836-11ef-b0b3-7b20d179d134"
+    },
+    "label" : null,
+    "name" : "Thermostat   T1 123",
+    "softwareId" : null,
+    "type" : "thermostat"
+  },
+  "credentials" : {
+    "credentialsId" : "T1_TEST_TOKEN",
+    "credentialsType" : "ACCESS_TOKEN",
+    "credentialsValue" : null
+  },
+  "relations" : [ ],
+  "attributes" : {
+    "SERVER_SCOPE" : [ {
+      "booleanValue" : false,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "active",
+      "lastUpdateTs" : 1741010579472,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "humidityAlarmFlag",
+      "lastUpdateTs" : 1741009922700,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "humidityAlarmThreshold",
+      "lastUpdateTs" : 1741009922700,
+      "longValue" : 50,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "inactivityAlarmTime",
+      "lastUpdateTs" : 1741010579472,
+      "longValue" : 1741010579446,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : 37.3948,
+      "jsonValue" : null,
+      "key" : "latitude",
+      "lastUpdateTs" : 1741009922700,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : -122.1503,
+      "jsonValue" : null,
+      "key" : "longitude",
+      "lastUpdateTs" : 1741009922700,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : true,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "temperatureAlarmFlag",
+      "lastUpdateTs" : 1741009922700,
+      "longValue" : null,
+      "strValue" : null
+    }, {
+      "booleanValue" : null,
+      "doubleValue" : null,
+      "jsonValue" : null,
+      "key" : "temperatureAlarmThreshold",
+      "lastUpdateTs" : 1741009922700,
+      "longValue" : 20,
+      "strValue" : null
+    } ],
+    "SHARED_SCOPE" : [ ]
+  },
+  "calculatedFields" : [ {
+    "configuration" : {
+      "type" : "SCRIPT",
+      "arguments" : {
+        "defrost" : {
+          "defaultValue" : "",
+          "refEntityKey" : {
+            "key" : "defrost",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "var merged = merge(defrost);",
+      "output" : {
+        "type" : "TIME_SERIES"
+      }
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1741017896208,
+      "failuresEnabled" : true
+    },
+    "name" : "defrost",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "aec95fd0-f836-11ef-b0b3-7b20d179d134"
+    },
+    "type" : "SCRIPT"
+  }, {
+    "configuration" : {
+      "type" : "SCRIPT",
+      "arguments" : {
+        "mainIntakeValveOpened" : {
+          "defaultValue" : "2",
+          "refEntityId" : {
+            "entityType" : "TENANT",
+            "id" : "aec95fd0-f836-11ef-b0b3-7b20d179d134"
+          },
+          "refEntityKey" : {
+            "key" : "ghgh",
+            "type" : "TS_LATEST"
+          }
+        },
+        "mainIntakeValveOpened2" : {
+          "defaultValue" : "",
+          "refEntityKey" : {
+            "key" : "mainIntakeValveOpened2",
+            "type" : "TS_LATEST"
+          }
+        },
+        "poolDrainValveOpened" : {
+          "defaultValue" : "1",
+          "refEntityKey" : {
+            "key" : "poolDrainValveOpened",
+            "type" : "TS_LATEST"
+          }
+        },
+        "poolDrainValveOpened4" : {
+          "defaultValue" : "",
+          "refEntityKey" : {
+            "key" : "poolDrainValveOpened5",
+            "type" : "TS_LATEST"
+          }
+        },
+        "poolWeirValveOpened" : {
+          "defaultValue" : "1",
+          "refEntityKey" : {
+            "key" : "poolWeirValveOpened",
+            "type" : "TS_LATEST"
+          }
+        },
+        "waterLevel" : {
+          "defaultValue" : "1",
+          "refEntityKey" : {
+            "key" : "waterLevel",
+            "type" : "TS_LATEST"
+          }
+        },
+        "waterPumpActive" : {
+          "defaultValue" : "1",
+          "refEntityKey" : {
+            "key" : "waterPumpActive",
+            "type" : "TS_LATEST"
+          }
+        },
+        "waterPumpOutgoingValveOpened" : {
+          "defaultValue" : "",
+          "refEntityKey" : {
+            "key" : "waterPumpOutgoingValveOpened",
+            "type" : "TS_LATEST"
+          }
+        },
+        "waterPumpRunning" : {
+          "defaultValue" : "1",
+          "refEntityKey" : {
+            "key" : "waterPumpRunning",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "var filterSegmentFlowing = waterPumpActive.value === true &&\n    calculateFilterSegment();\n\nreturn {\n    \"cf_filterSegmentFlowing\": filterSegmentFlowing\n};\n\nfunction calculateFilterSegment() {\n    if (!(waterPumpOutgoingValveOpened.value === 1 &&\n            waterPumpRunning.value === 1)) {\n        return false;\n    }\n    if (poolDrainValveOpened.value === 1 && waterLevel\n        .value > 0) {\n        return true;\n    }\n    if (poolWeirValveOpened.value === 1 && waterLevel\n        .value > 88) {\n        return true;\n    }\n    if (mainIntakeValveOpened.value === 1) {\n        return true;\n    }\n    return false;\n}",
+      "output" : {
+        "type" : "TIME_SERIES"
+      }
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1741087616872,
+      "failuresEnabled" : true
+    },
+    "name" : "long",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "aec95fd0-f836-11ef-b0b3-7b20d179d134"
+    },
+    "type" : "SCRIPT"
+  }, {
+    "configuration" : {
+      "type" : "SIMPLE",
+      "arguments" : {
+        "simple" : {
+          "defaultValue" : "",
+          "refEntityKey" : {
+            "key" : "    simple   ",
+            "type" : "TS_LATEST"
+          }
+        }
+      },
+      "expression" : "simp le",
+      "output" : {
+        "name" : "sim ple",
+        "type" : "TIME_SERIES"
+      }
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1741104667034,
+      "failuresEnabled" : true
+    },
+    "name" : "si m p l e",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "aec95fd0-f836-11ef-b0b3-7b20d179d134"
+    },
+    "type" : "SIMPLE"
+  }, {
+    "configuration" : {
+      "type" : "SCRIPT",
+      "arguments" : {
+        "x" : {
+          "defaultValue" : "8",
+          "refEntityKey" : {
+            "key" : "x",
+            "type" : "TS_LATEST"
+          }
+        },
+        "y" : {
+          "limit" : 100,
+          "refEntityKey" : {
+            "key" : "y",
+            "type" : "TS_ROLLING"
+          },
+          "timeWindow" : 900000
+        }
+      },
+      "expression" : "return {x: \"x\"}",
+      "output" : {
+        "name" : "",
+        "type" : "TIME_SERIES"
+      }
+    },
+    "configurationVersion" : 0,
+    "debugSettings" : {
+      "allEnabled" : false,
+      "allEnabledUntil" : 1741010930630,
+      "failuresEnabled" : true
+    },
+    "name" : "test",
+    "tenantId" : {
+      "entityType" : "TENANT",
+      "id" : "aec95fd0-f836-11ef-b0b3-7b20d179d134"
+    },
+    "type" : "SCRIPT"
+  } ]
+}
